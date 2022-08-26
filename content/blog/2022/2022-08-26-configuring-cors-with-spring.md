@@ -42,7 +42,7 @@ You can check out the [source code on GitHub](https://github.com/thombergs/code-
     ng serve --open
 ````
 We should be able to start the client application successfully.
-{{% image alt="settings" src="images/posts/configuring-cors-with-spring/client.jpg" %}}
+{{% image alt="settings" src="images/posts/configuring-cors-with-spring/client.JPG" %}}
 
 ## Setting up a Sample Server Application
 
@@ -63,10 +63,10 @@ and the [Spring Reactive source code](https://github.com/thombergs/code-examples
 Once the Spring application successfully starts, the client application should be able to successfully load data from the server.
 
 Call to the Spring REST server:
-{{% image alt="settings" src="images/posts/configuring-cors-with-spring/app.jpg" %}}
+{{% image alt="settings" src="images/posts/configuring-cors-with-spring/app.JPG" %}}
 
 Call to the Spring Reactive server:
-{{% image alt="settings" src="images/posts/configuring-cors-with-spring/app_reactive.jpg" %}}
+{{% image alt="settings" src="images/posts/configuring-cors-with-spring/app_reactive.JPG" %}}
 
 ## Understanding `@CrossOrigin` Attributes
 
@@ -93,7 +93,7 @@ No 'Access-Control-Allow-Origin` header is present on the requested
 resource
 ```
 
-{{% image alt="settings" src="images/posts/configuring-cors-with-spring/cors-error.jpg" %}}
+{{% image alt="settings" src="images/posts/configuring-cors-with-spring/cors-error.JPG" %}}
 
 This is because even though both applications are served from `localhost`, they are not considered the same origin [because the port is different](/complete-guide-to-cors/#same-origin-vs-cross-origin).
 
@@ -157,7 +157,7 @@ public class LibraryController {
     }
 }
 ````
-- By defining the annotation at both class and method levels its combined attributes will be applied to the methods i.e (`origins`, `allowedHeaders`, ``)
+- By defining the annotation at both class and method levels its combined attributes will be applied to the methods i.e (`origins`, `allowedHeaders`, `maxAge`)
 - In all the above cases we can define both global CORS cmaxAgeonfiguration and local configuration using `@CrossOrigin`.
   For attributes that accept multiple values, **a combination of global and local values will apply (i.e. they are merged)**. For attributes that accept
   only a single value, **the local value will take precedence over the global one**.
